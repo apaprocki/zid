@@ -341,11 +341,11 @@ int main(int argc, char **argv)
         char posix_tz[128];
         if (fgets(posix_tz, sizeof(posix_tz), fp) &&
             fgets(posix_tz, sizeof(posix_tz), fp) &&
-            ('\n' != posix_tz[0] || '\r' != posix_tz[0])) {
+            '\n' != posix_tz[0]) {
 
             // Truncate the string at the trailing newline.
             for (size_t i = 0; i < sizeof(posix_tz); ++i) {
-                if ('\n' == posix_tz[i] || '\r' == posix_tz[i]) {
+                if ('\n' == posix_tz[i]) {
                     posix_tz[i] = '\0';
                     break;
                 }
