@@ -1,0 +1,49 @@
+.TH zid 8 "4 Nov 2015"
+.SH NAME
+zid \- zoneinfo dump
+.SH SYNOPSIS
+.LP
+.B zid
+[
+.I filename
+]
+.SH DESCRIPTION
+.I zid
+reads binary zoneinfo data from the file named on the command line and outputs
+the raw values contained within the data to
+.I stdout
+\&. The
+.I filename
+must have been compiled using the
+.I zic
+command and be in the correct
+.I tzfile
+format.
+.SH EXIT STATUS
+An exit value of 0 indicates success, while a non-zero exit value indicates
+failure and an appropriate error will be printed to
+.I stderr
+\&.
+.SH FILES
+.sp
+.ne 2
+.mk
+.na
+\fB\fB/usr/local/etc/zoneinfo\fR\fR
+.ad
+.sp .6
+.RS 4n
+Standard directory used for compiled zoneinfo files
+.RE
+.SH AUTHOR
+Written by Andrew Paprocki.
+.SH SEE ALSO
+tzfile(5), zic(8)
+.\" `zid` by Andrew Paprocki
+.\"
+.\" To the extent possible under law, the person who associated CC0 with
+.\" `zid` has waived all copyright and related or neighboring rights to
+.\" `zid`.
+.\"
+.\" You should have received a copy of the CC0 legalcode along with this
+.\" work.  If not, see <http://creativecommons.org/publicdomain/zero/1.0/>.
